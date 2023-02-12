@@ -22,8 +22,8 @@ struct contains_fn final {
             typename Proj = std::identity>
   requires std::indirect_binary_predicate < std::ranges::equal_to,
       std::projected<std::ranges::iterator_t<Range>, Proj>,
-      const T *> constexpr bool operator()(Range &&range, const T &value,
-                                           Proj projection = {}) const {
+  const T *> constexpr bool operator()(Range &&range, const T &value,
+                                       Proj projection = {}) const {
     return (*this)(std::ranges::begin(range), std::ranges::end(range), value,
                    std::move(projection));
   }
