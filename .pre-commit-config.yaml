@@ -32,6 +32,6 @@ repos:
     rev: v15.0.7
     hooks:
       - id: clang-format
-        args: ["-style=Google", "--verbose", "-n"]
+        args: ["-style=Google", "--verbose"]
         types_or: [c++]
         exclude: 3rd-parties/
