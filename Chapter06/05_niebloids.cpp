@@ -10,9 +10,10 @@ namespace detail {
 struct contains_fn final {
   template <std::input_iterator It, std::sentinel_for<It> Sent, typename T,
             typename Proj = std::identity>
-  requires std::indirect_binary_predicate<
-      std::ranges::equal_to, std::projected<It, Proj>, const T *> constexpr bool
-  operator()(It first, Sent last, const T &value, Proj projection = {}) const {
+  requires std::indirect_binary_predicate < std::ranges::equal_to,
+      std::projected<It, Proj>,
+  const T * > constexpr bool operator()(It first, Sent last, const T &value,
+                                        Proj projection = {}) const {
     while (first != last && std::invoke(projection, *first) != value) ++first;
     return first != last;
   }
