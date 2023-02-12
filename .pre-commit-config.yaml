@@ -28,9 +28,15 @@ repos:
     hooks:
       - id: cmake-format
         exclude: 3rd-parties/
-  - repo: https://github.com/pre-commit/mirrors-clang-format
-    rev: v15.0.7
+#  - repo: https://github.com/pre-commit/mirrors-clang-format
+#    rev: v15.0.7
+#    hooks:
+#      - id: clang-format
+#        types_or: [c++]
+#        exclude: 3rd-parties/
+  - repo: https://github.com/pocc/pre-commit-hooks
+    rev: v1.3.5
     hooks:
       - id: clang-format
-        types_or: [c++]
+        args: [--style=Google, -i]
         exclude: 3rd-parties/
