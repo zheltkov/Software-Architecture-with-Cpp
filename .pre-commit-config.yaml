@@ -27,7 +27,7 @@ repos:
     rev: v15.0.7
     hooks:
     - id: clang-format
-      args: [--verbose, --style=Google, -i]
+      args: ["-style=Google"]
       types_or: [c++]
       exclude: 3rd-parties/
   - repo: https://github.com/iconmaster5326/cmake-format-pre-commit-hook
