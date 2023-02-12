@@ -4,7 +4,7 @@
 #include <optional>
 #include <stdexcept>
 #include <string>
-
+// clang-format off
 class stars {
  public:
   explicit constexpr stars(float stars = 0.f) : stars_{stars} {
@@ -50,3 +50,4 @@ class i_customer_review_store {
 
   virtual void post_review(review review) = 0;
 };
+// clang-format on
