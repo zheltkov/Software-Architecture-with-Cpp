@@ -4,7 +4,7 @@
 #include <vector>
 
 using namespace std::ranges;
-// clang-format off
+
 namespace {
 
 template <typename T>
@@ -40,4 +40,3 @@ BENCHMARK(binary_search_in_sorted_vector);
 }  // namespace
 
 BENCHMARK_MAIN();
-// clang-format on
