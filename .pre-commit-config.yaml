@@ -34,5 +34,4 @@ repos:
     rev: v0.6.9
     hooks:
       - id: cmake-format
-        args: [--verbose]
         exclude: 3rd-parties/
